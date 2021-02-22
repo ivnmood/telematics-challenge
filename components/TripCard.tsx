@@ -31,6 +31,7 @@ export default function TripCard({ type, startTrip, endTrip }: TripCardData) {
           {format(startTrip, "MM.dd.yyyy p")}
         </Text>
         <Text>
+          {"    "}
           <Text style={styles.bold}> To:</Text>{" "}
           {format(endTrip, "MM.dd.yyyy p")}
         </Text>

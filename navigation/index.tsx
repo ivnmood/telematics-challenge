@@ -9,7 +9,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import NotFoundScreen from "../screens/NotFoundScreen";
 import { RootStackParamList } from "../types";
-import BottomTabNavigator from "./BottomTabNavigator";
+import Dashboard from "../screens/Dashboard";
+import MyDriverScore from "../screens/MyDriverScore";
+import MyTrips from "../screens/MyTrips";
+import About from "../screens/About";
 
 export default function Navigation({
   colorScheme,
@@ -29,8 +32,27 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Dashboard"
+        component={Dashboard}
+        options={{ title: "Dashboard" }}
+      />
+      <Stack.Screen
+        name="My Driver Score"
+        component={MyDriverScore}
+        options={{ title: "My Driver Score" }}
+      />
+      <Stack.Screen
+        name="My Trips"
+        component={MyTrips}
+        options={{ headerTitle: "My Trips" }}
+      />
+      <Stack.Screen
+        name="About"
+        component={About}
+        options={{ headerTitle: "About" }}
+      />
       <Stack.Screen
         name="NotFound"
         component={NotFoundScreen}
