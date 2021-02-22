@@ -4,14 +4,38 @@ export type RootStackParamList = {
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Dashboard: undefined;
+  "My Driver Score": undefined;
+  "My Trips": undefined;
+  About: undefined;
 };
 
 export type TabOneParamList = {
-  TabOneScreen: undefined;
+  Dashboard: undefined;
 };
 
 export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+  "My Driver Score": undefined;
+};
+
+export type TabThreeParamList = {
+  "My Trips": undefined;
+};
+
+export type TabFourParamList = {
+  About: undefined;
+};
+
+export type ScoreCardData = {
+  id: string;
+  title: string;
+  score: number;
+  recommendation: string;
+};
+
+export type TripCardData = {
+  id: string;
+  type: "business" | "personal";
+  startTrip: Date;
+  endTrip: Date;
 };
