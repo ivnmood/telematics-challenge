@@ -1,0 +1,66 @@
+{
+  "scoreData": [
+    {
+      "id": "111",
+      "title": "My Driver Score",
+      "score": 60,
+      "recommendation": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quidem"
+    },
+    {
+      "id": "222",
+      "title": "Acceleration Score",
+      "score": 73,
+      "recommendation": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias autem commodi, dicta iusto nemo quia."
+    },
+    {
+      "id": "333",
+      "title": "Braking Score",
+      "score": 55,
+      "recommendation": "Lorem ipsum dolor sit amet, consectetur adipisicing."
+    },
+    {
+      "id": "444",
+      "title": "Cornering Score",
+      "score": 43,
+      "recommendation": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate ea est."
+    },
+    {
+      "id": "555",
+      "title": "Eco Driving Score",
+      "score": 68,
+      "recommendation": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, quidem"
+    }
+  ],
+  "tripData": [
+    {
+      "id": "111",
+      "type": "business",
+      "startTrip": 1612163700000,
+      "endTrip": 1612171800000
+    },
+    {
+      "id": "222",
+      "type": "personal",
+      "startTrip": 1612163700000,
+      "endTrip": 1612171800000
+    },
+    {
+      "id": "333",
+      "type": "business",
+      "startTrip": 1612163700000,
+      "endTrip": 1612171800000
+    },
+    {
+      "id": "444",
+      "type": "personal",
+      "startTrip": 1612163700000,
+      "endTrip": 1612171800000
+    },
+    {
+      "id": "555",
+      "type": "business",
+      "startTrip": 1612163700000,
+      "endTrip": 1612171800000
+    }
+  ]
+}

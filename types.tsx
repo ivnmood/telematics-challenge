@@ -27,15 +27,13 @@ export type TabFourParamList = {
 };
 
 export type ScoreCardData = {
-  id: string;
   title: string;
   score: number;
   recommendation: string;
 };
 
 export type TripCardData = {
-  id: string;
-  type: "business" | "personal";
-  startTrip: Date;
-  endTrip: Date;
+  type: string;
+  startTrip: number;
+  endTrip: number;
 };

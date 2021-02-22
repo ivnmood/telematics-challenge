@@ -3,42 +3,9 @@ import { FlatList, StyleSheet } from "react-native";
 
 import { Text, View } from "../components/Themed";
 import TripCard from "../components/TripCard";
-import { TripCardData } from "../types";
+import { tripData as data } from "../mock.json";
 
 export default function MyTrips() {
-  const data: TripCardData[] = [
-    {
-      id: "111",
-      type: "business",
-      startTrip: new Date(2021, 1, 1, 10, 15),
-      endTrip: new Date(2021, 1, 1, 12, 30),
-    },
-    {
-      id: "222",
-      type: "personal",
-      startTrip: new Date(2020, 12, 31, 23, 15),
-      endTrip: new Date(2021, 1, 1, 10, 15),
-    },
-    {
-      id: "333",
-      type: "business",
-      startTrip: new Date(2020, 12, 31, 23, 15),
-      endTrip: new Date(2021, 1, 1, 10, 15),
-    },
-    {
-      id: "444",
-      type: "personal",
-      startTrip: new Date(2020, 12, 31, 23, 15),
-      endTrip: new Date(2021, 1, 1, 10, 15),
-    },
-    {
-      id: "555",
-      type: "business",
-      startTrip: new Date(2020, 12, 31, 23, 15),
-      endTrip: new Date(2021, 1, 1, 10, 15),
-    },
-  ];
-
   if (!data.length) {
     return (
       <View style={[styles.container, styles.emptyContainer]}>
@@ -46,13 +13,18 @@ export default function MyTrips() {
       </View>
     );
   }
-
   return (
     <View style={styles.container}>
       <FlatList
         data={data}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <TripCard data={item} />}
+        renderItem={({ item }) => (
+          <TripCard
+            type={item.type}
+            endTrip={item.endTrip}
+            startTrip={item.startTrip}
+          />
+        )}
         contentContainerStyle={styles.contentContainerStyle}
       />
     </View>

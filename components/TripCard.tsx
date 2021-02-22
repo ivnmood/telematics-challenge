@@ -6,20 +6,11 @@ import { format } from "date-fns";
 import { Text, View } from "./Themed";
 import { TripCardData } from "../types";
 import Colors from "../constants/Colors";
+import { hitSlop } from "../constants/variables";
 import useColorScheme from "../hooks/useColorScheme";
 
-export default function TripCard({ data }: { data: TripCardData }) {
-  const { type, startTrip, endTrip } = data;
-
+export default function TripCard({ type, startTrip, endTrip }: TripCardData) {
   const theme = useColorScheme();
-
-  const hitSlop = {
-    top: 15,
-    right: 15,
-    bottom: 15,
-    left: 15,
-  };
-
   return (
     <View
       style={[
@@ -28,19 +19,11 @@ export default function TripCard({ data }: { data: TripCardData }) {
       ]}
     >
       <View style={[styles.frame, styles.iconsContainer]}>
-        {type === "business" ? (
-          <Ionicons
-            name="briefcase"
-            size={24}
-            color={Colors[theme]["iconColor"]}
-          />
-        ) : (
-          <Ionicons
-            name="person"
-            size={24}
-            color={Colors[theme]["iconColor"]}
-          />
-        )}
+        <Ionicons
+          name={type === "business" ? "briefcase" : "person"}
+          size={24}
+          color={Colors[theme]["iconColor"]}
+        />
       </View>
       <View style={[styles.frame, styles.dateContainer]}>
         <Text>
